@@ -1,3 +1,4 @@
+
 export const generateRandomInt = (from, to) => {
   if(from > to){
     return 0;
@@ -12,3 +13,4 @@ export const generateRandomDate = (maxDate = Date.now()) => {
 
 export const generateRandomImageUrl = () =>
   `http://picsum.photos/248/152?r=${generateRandomInt(0, 1000)}`;
+
