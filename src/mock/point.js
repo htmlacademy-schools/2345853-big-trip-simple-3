@@ -1,11 +1,15 @@
-import { generateRandomPoint } from '../mock/point';
+import {generateRandomDate, generateRandomInt} from '../utils/random';
 
-const POINT_COUNT = 3;
+const POINT_TYPES = ['taxi', 'bus', 'train', 'ship', 'drive', 'flight', 'check-in', 'sightseeing', 'restaurant'];
 
-export default class TripPointModel {
-  tripPoints = Array.from({length: POINT_COUNT}, generateRandomPoint);
+export const generateRandomType = () => POINT_TYPES[generateRandomInt(0, POINT_TYPES.length)];
 
-  getTripPoints() {
-    return this.tripPoints;
-  }
-}
+export const generateRandomPoint = () => ({
+  'basePrice': generateRandomInt(300, 6666),
+  'id': generateRandomInt(0, 3),
+  'dateFrom': generateRandomDate(),
+  'dateTo': generateRandomDate(),
+  'destination': generateRandomInt(0, 9),
+  'offers': [1, 3, 5],
+  'type': generateRandomType()
+});
