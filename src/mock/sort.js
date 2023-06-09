@@ -1,5 +1,4 @@
 import {SortType} from '../utils/trip-points';
-
 const sorts = {
   [SortType.DAY]: () => (0),
   [SortType.EVENT]: () => (0),
