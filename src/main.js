@@ -12,7 +12,7 @@ const filterContainer = document.querySelector('.trip-controls__filters');
 const tripEventsSection = document.querySelector('.trip-events');
 const headerBlock = document.querySelector('.trip-main');
 
-const AUTHORIZATION = 'Basic Dimboba';
+const AUTHORIZATION = 'Basic Jrika';
 const END_POINT = 'https://18.ecmascript.pages.academy/big-trip/';
 
 const tripEventApiService = new TripEventApiService(END_POINT, AUTHORIZATION);
